@@ -60,14 +60,15 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 3rem 1.5rem;
+    padding: 1rem 3.5rem 1.5rem;
     text-align: center;
 }
 
 .site-logo {
-    --size: 48px;
+    --size: 52px;
     width: var(--size);
     height: var(--size);
+    margin: auto;
 }
 
 h1 {
@@ -75,9 +76,10 @@ h1 {
 }
 
 h2 {
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: normal;
+    line-height: 1.4;
+    margin-top: 5px;
     color: var(--grey);
 }
 /* ----------- */
@@ -113,7 +115,7 @@ section {
     background-image: 
         /*linear-gradient(to right, aliceblue 1px, transparent 1px),*/
         linear-gradient(to bottom, aliceblue 2px, transparent 1px);
-    background-size: 25px 25px;
+    background-size: 30px 30px;
     background-attachment: fixed;
     overflow-y: auto;
 
@@ -122,20 +124,25 @@ section {
 
     /*height: 500px;*/
     max-height: 500px;
-    padding: .5lh;
+    padding-top: 15px;
 
-    & .resource-list {
-        margin-left: 1.5rem;
-        line-height: 25px;
+    & .resources-list {
+        margin-left: 3rem;
+        line-height: 30px;
 
         & .list-item {
-            padding-inline-start: 1ch;
+            padding-inline-start: 1.5ch;
 
             &::marker {
                 content: "\f105";
                 font-family: "Font Awesome 7 Free";
                 font-weight: 600;
                 margin-right: 5px;
+            }
+
+            & :hover, &:hover::marker {
+                color: blue;
+                text-decoration: underline;
             }
         }
     }
