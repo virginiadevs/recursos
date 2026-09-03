@@ -1,0 +1,39 @@
+{
+    "availableTags": [
+        "accesibilidad",
+        "aprendizaje",
+        "backend",
+        "css",
+        "frontend",
+        "html",
+        "img",
+        "js",
+        "juego",
+        "php",
+        "plantillas",
+        "sql"
+    ],    
+    "resources": [
+        {
+            "id": 1,
+            "name": "HTMLrev - Plantillas y temas gratuitos de HTML y CSS",
+            "active": true,
+            "tags": ["html", "css", "plantillas", "frontend"],
+            "url": "https://htmlrev.com/"
+        },
+        {
+            "id": 2,
+            "name": "Roadmap - Ideas para proyectos de frontend",
+            "active": true,
+            "tags": ["html", "css", "frontend"],
+            "url": "https://roadmap.sh/frontend/projects"
+        },
+        {
+            "id": 3,
+            "name": "Roadmap - Ideas para proyectos de backend",
+            "active": true,
+            "tags": ["html", "css", "backend"],
+            "url": "https://roadmap.sh/backend/projects"
+        }
+    ]
+}
