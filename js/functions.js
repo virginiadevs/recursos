@@ -27,78 +27,43 @@ const handleToggleClick = () => {
     localStorage.setItem("theme", isDark ? "dark" : "light");
 }
 
-document.getElementById("headerThemeToggle").addEventListener("click", handleToggleClick);
-document.getElementById("mobileThemeToggle").addEventListener("click", handleToggleClick);
+/*document.getElementById("headerThemeToggle").addEventListener("click", handleToggleClick);
+document.getElementById("mobileThemeToggle").addEventListener("click", handleToggleClick);*/
 // ---------------------------------------------------------------------------------------
 
-/* --- PROJECTS FILTER --- */
-const filterBtns = document.querySelectorAll(".filter-btn");
-filterBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-        const filterId = e.target.id;
-        
-        const projects = document.querySelectorAll(".featured article");
+/* --- VIEW RESOURCES --- */
+fetch("files/resources.json")
+    .then(response => response.json())
+    .then(data => {
+        const list = document.querySelector(".resources-list");
 
-        projects.forEach(project => {
-            project.classList.remove("hidden");
+        data.resources.forEach(resource => {
+            const li = document.createElement("li");
+            li.setAttribute("class", "list-item");
 
-            if(filterId != "allFilter") {
-                let exists = false;
+            const link = document.createElement("a");
+            link.href = resource.url;
+            link.textContent = resource.name;
+            link.target = "_blank";
 
-                const keywords = project.querySelectorAll(".keywords span");
-                keywords.forEach(key => {
-                    if(key.textContent.includes(filterId.replace("Filter", ""))) {
-                        exists = true;
-                    }
-                });
-            
-                if(!exists) {
-                    project.classList.add("hidden");
-                }
-            }
+            li.appendChild(link);
+            list.appendChild(li);
         });
-    });
-});
+    })
+    .catch(err => console.error(err));
+// ---------------------------------------------------------------------------------------
 
-// Checked/unchecked buttons
-const buttons = document.querySelectorAll(".filter-list button");
+/* --- RESOURCES FILTER --- */
+const searchInput = document.querySelector("#search-input");
 
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        // Removes 'active' class from all buttons
-        buttons.forEach(b => b.classList.remove("active"));
-        
-        // Adds 'active' class to the clicked button
-        button.classList.add("active");
+searchInput.addEventListener("input", () => {
+    const inputText = searchInput.value.toLowerCase();
+    const resources = document.querySelectorAll(".resources-list .list-item a");
+    
+    resources.forEach(resource => {
+        const resourceText = resource.textContent.toLowerCase();
+        resource.parentElement.style.display = "none";
+        resource.parentElement.style.display = resourceText.includes(inputText) ? "" : "none";
     });
 });
 // ---------------------------------------------------------------------------------------
-
-/* --- BUTTON STATE --- */
-function updateBtnState() {
-    const actionBtn = document.querySelector(".action-btn");
-    const officeImg = document.querySelector(".office-img");
-    const workingHours = document.querySelector(".contact-message figure");
-
-    const now = new Date(); 
-    const hour = now.getHours();
-    const day = now.getDay();
-
-    const worktime = hour >= 8 && hour < 20;
-    const workday = day >= 1 && day <= 5;
-
-    if(worktime && workday) {
-        //actionBtn.classList.remove("disabled");
-        officeImg.src = "img/oficina.webp";
-        //workingHours.style.display = "none";
-    }
-    else {
-        //actionBtn.classList.add("disabled");
-        officeImg.src = "img/oficina-noche.webp";
-        officeImg.style.filter = "brightness(200%)";
-        //workingHours.style.display = "block";
-    }
-}
-
-updateBtnState();
-setInterval(updateBtnState, 60 * 1000);
