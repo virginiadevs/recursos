@@ -103,12 +103,63 @@ main {
 
         &:focus {
             outline: none;
-            border-bottom: 2px solid blue;
+            border-bottom: 2px solid steelblue;
         }
     }
 }
 
-.list-section {
+.tags-menu {
+    user-select: none;
+    position: relative;
+
+    & #tags-cb, label { cursor: pointer; }
+
+    & #tags-cb {
+        display: none;
+    }
+
+    & label::before {
+        content: "\f0ca";
+        font-family: "Font Awesome 7 Free";
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
+    & .tags-list {
+        margin-top: .5rem;
+        line-height: 25px;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        background: var(--background-color);
+        box-shadow: 1px 1px 5px var(--light-grey);
+        padding: .5rem 1rem;
+        width: 150px;
+
+        & .list-item {
+            font-size: 12px;
+            padding-inline-start: 1.5ch;
+            
+            &::marker {
+                content: "\f0da";
+                font-family: "Font Awesome 7 Free";
+                font-weight: 600;
+                margin-right: 5px;
+                font-size: 10px;
+            }
+
+            & button {
+                cursor: pointer;
+                border: none;
+                background: transparent;
+            }
+        }
+    }
+}
+
+.resources-section {
     background-image: 
         /*linear-gradient(to right, aliceblue 1px, transparent 1px),*/
         linear-gradient(to bottom, aliceblue 2px, transparent 1px);
@@ -118,13 +169,14 @@ main {
 
     border: 1px solid var(--light-grey);
     border-left: var(--grey) 5px dotted;
+    box-shadow: 1px 2px 3px var(--light-grey);
 
     /*height: 500px;*/
     max-height: 500px;
     padding-top: 15px;
 
     & .resources-list {
-        margin-left: 3rem;
+        margin-inline: 2rem 1rem;
         line-height: 30px;
 
         & .list-item {
@@ -136,13 +188,14 @@ main {
                 font-weight: 600;
                 margin-right: 5px;
             }
-
-            & :hover, &:hover::marker {
-                color: blue;
-                text-decoration: underline;
-            }
         }
     }
+}
+
+.tags-list .list-item:hover button, .tags-list .list-item:hover::marker,
+.resources-list .list-item a:hover, .resources-list .list-item:has(a:hover)::marker {
+    color: blue;
+    text-decoration: underline;
 }
 /* ----------- */
 

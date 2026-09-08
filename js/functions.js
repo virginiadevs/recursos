@@ -67,3 +67,39 @@ searchInput.addEventListener("input", () => {
     });
 });
 // ---------------------------------------------------------------------------------------
+
+/* --- VIEW TAGS --- */
+const menu = document.querySelector(".tags-menu");
+const list = document.querySelector(".tags-list");
+const tagsCb = document.querySelector("#tags-cb");
+
+fetch("files/resources.json")
+    .then(response => response.json())
+    .then(data => {
+        data.availableTags.forEach(tag => {
+            const li = document.createElement("li");
+            li.setAttribute("class", "list-item");
+
+            const btn = document.createElement("button");
+            btn.textContent = tag;
+
+            li.appendChild(btn);
+            list.appendChild(li);
+        });
+
+        list.classList.add("hidden");
+    })
+    .catch(err => console.error(err));
+
+// Mostrar y ocultar menú pulsando el propio menú
+tagsCb.addEventListener("change", () => {
+    list.classList.toggle("hidden", !tagsCb.checked);
+});
+
+// Ocultar menú al pulsar en cualquier otra parte
+document.addEventListener("click", (ev) => {
+    if(!menu.contains(ev.target)) {
+        tagsCb.checked = false;
+        list.classList.add("hidden");
+    }
+});
