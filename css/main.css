@@ -92,9 +92,6 @@ main {
     gap: 2rem;
 }
 
-section {
-}
-
 .search-section {
 
     & input {
