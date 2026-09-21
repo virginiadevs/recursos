@@ -1,5 +1,5 @@
 {
-    "availableTags": [
+    "tags": [
         "accesibilidad",
         "aprendizaje",
         "backend",
@@ -23,17 +23,38 @@
         },
         {
             "id": 2,
-            "name": "Roadmap - Ideas para proyectos de frontend",
+            "name": "Roadmap | Ideas para proyectos de frontend",
             "active": true,
             "tags": ["html", "css", "frontend"],
             "url": "https://roadmap.sh/frontend/projects"
         },
         {
             "id": 3,
-            "name": "Roadmap - Ideas para proyectos de backend",
+            "name": "Roadmap | Ideas para proyectos de backend",
             "active": true,
             "tags": ["html", "css", "backend"],
             "url": "https://roadmap.sh/backend/projects"
+        },
+        {
+            "id": 4,
+            "name": "Pixelbin.io | Erase - Quitar fondo de imágenes",
+            "active": true,
+            "tags": ["img"],
+            "url": "https://www.erase.bg/es"
+        },
+        {
+            "id": 5,
+            "name": "Pixelbin.io | Upscale Media - Mejorar calidad de imagen",
+            "active": true,
+            "tags": ["img"],
+            "url": "https://www.upscale.media/es"
+        },
+        {
+            "id": 6,
+            "name": "Pixelbin.io | Watermark Remover - Eliminador de marcas de agua de imágenes",
+            "active": true,
+            "tags": ["img"],
+            "url": "https://www.watermarkremover.io/es"
         }
     ]
 }
