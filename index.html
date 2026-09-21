@@ -41,17 +41,19 @@
 
     <!-- MAIN CONTENT -->
     <main>
-        <section class="search-section">
-            <input type="search" name="search-input" id="search-input" placeholder="Escribe el nombre o tipo de recurso que quieras encontrar...">
+        <section class="filter-section">
+            <div class="search-group">
+                <i class="fas fa-magnifying-glass"></i>
+                <input type="search" name="search-input" id="search-input" placeholder="Buscar...">
+            </div>
+
+            <div class="menu-group">
+                <label for="tags-list">Categorías:</label>
+                <select name="tags-list" id="tags-list">
+                    <option value="" selected>Todas</option>
+                </select>
+            </div>
         </section>
-
-        <nav class="tags-menu">
-            <input type="checkbox" name="tags-cb" id="tags-cb">
-            <label for="tags-cb">Filtros</label>
-            <ul class="tags-list"></ul>
-
-            <span class="selected-tag">Prueba <sup>x</sup></span>
-        </nav>
 
         <section class="resources-section">
             <ul class="resources-list"></ul>
@@ -64,7 +66,7 @@
             <img src="img/virginiadevs-logo.webp" alt="Logo de VirginiaDevs">
         </figure>
 
-        <p>Creado con <i class="fas fa-heart"></i> por VirginiaDevs.</p>
+        <p>Creado con <i class="far fa-heart"></i> por VirginiaDevs.</p>
     </footer>
 
     <!-- Funciones -->

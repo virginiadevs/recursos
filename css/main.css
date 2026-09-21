@@ -9,12 +9,9 @@
     --white: #f0f2f4;
     --grey: light-dark(#666, #ccc);
     --light-grey: #aaaaaa80;
-    /*--box-shadow: 3px 3px 0 0 var(--light-grey);*/
 
     --background-color: light-dark(#fff, var(--black));
     --text-color: light-dark(var(--black), var(--white));
-    
-    --border-radius: 8px;
     
     color-scheme: light dark;
 }
@@ -92,108 +89,87 @@ main {
     gap: 2rem;
 }
 
-.search-section {
+/* FILTERS */
+.filter-section {
+    /*display: flex;
+    flex-wrap: wrap;*/
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
 
-    & input {
-        width: 100%;
-        height: 1.7rem;
-        padding: 5px;
-        border: none;
-        border-bottom: 2px solid var(--text-color);
-
-        &:focus {
-            outline: none;
-            border-bottom: 2px solid blue;
-        }
+input, select {
+    height: 1.7rem;    
+    border: none;
+    
+    &:focus {
+        outline: none;
     }
 }
 
-.tags-menu {
-    user-select: none;
+.search-group {
     position: relative;
-    margin-left: 8px;
-    display: flex;
-    gap: 3rem;
-    width: fit-content;
+    width: 100%;
 
-    & #tags-cb, label { cursor: pointer; }
-
-    & #tags-cb {
-        display: none;
+    & i {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        color: gray;
     }
 
-    & label {
-        padding: .5rem 1rem;
-        background: aliceblue;
-        border-radius: var(--border-radius);
-        box-shadow: 3px 3px 0 0 var(--light-grey);
+    & input {
+        width: 100%;
+        padding-left: 30px;
+        border-bottom: 2px solid var(--text-color);
+
+        &:focus { border-bottom: 2px solid blue; }
     }
 
-    & label::before {
+    & input::before {
         content: "\f0ca";
         font-family: "Font Awesome 7 Free";
         font-weight: 600;
         margin-right: 5px;
     }
-
-    & .checked {
-        transform: translate(3px, 3px);
-        box-shadow: none;
-    }
-
-    & .tags-list {
-        margin-top: .5rem;
-        line-height: 25px;
-
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        background: var(--background-color);
-        box-shadow: 1px 1px 5px var(--light-grey);
-        padding: .5rem 1rem;
-        width: 150px;
-
-        & .list-item {
-            font-size: 12px;
-            padding-inline-start: 1.5ch;
-            
-            &::marker {
-                content: "\f0da";
-                font-family: "Font Awesome 7 Free";
-                font-weight: 600;
-                margin-right: 5px;
-                font-size: 10px;
-            }
-
-            & button {
-                cursor: pointer;
-                border: none;
-                background: transparent;
-            }
-        }
-    }
-
-    & .selected-tag {
-        
-    }
 }
 
+.menu-group {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    width: 100%;
+
+    border: 1px dashed var(--light-grey);
+    border-radius: 20px;
+    padding: 5px 10px;
+
+    & #tags-list {
+        flex: 1;
+        cursor: pointer;
+        padding-left: .5rem;
+    }
+
+    &:hover {
+        border-color: blue;
+    }
+}
+/* ----------- */
+
+/* RESOURCES */
 .resources-section {
     background-image: 
-        /*linear-gradient(to right, aliceblue 1px, transparent 1px),*/
         linear-gradient(to bottom, var(--light-grey) 1px, transparent 1px);
     background-size: 30px 30px;
-    background-attachment: fixed;
     overflow-y: auto;
     background-color: #FFFFE0;
+    background-position: 0 24px;
 
     border: 1px solid var(--light-grey);
     border-left: var(--grey) 5px dotted;
     box-shadow: 1px 2px 3px var(--light-grey);
 
     min-height: 600px;
-    padding-block: 15px;
 
     & .resources-list {
         margin-inline: 2rem 1rem;
@@ -212,7 +188,6 @@ main {
     }
 }
 
-.tags-list .list-item:hover button, .tags-list .list-item:hover::marker,
 .resources-list .list-item a:hover, .resources-list .list-item:has(a:hover)::marker {
     color: blue;
     text-decoration: underline;
@@ -221,22 +196,21 @@ main {
 
 /* FOOTER */
 footer {
-    margin: 1rem 0;
+    margin: 1rem 0 2rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+    flex-direction: column;
+    place-items: center;
+    gap: .5rem;
 
     & .my-logo {
         background: var(--background-color);
 
-        --size: 38px;
+        --size: 40px;
         width: var(--size);
         height: var(--size);
     }
 
     & p {
-        font-size: 13px;
-        margin-top: 5px;
+        font-size: 12px;
     }
 }

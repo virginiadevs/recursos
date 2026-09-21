@@ -3,11 +3,6 @@
     .header-content {
         max-width: 500px;
     }
-
-    /*main {
-        margin: 2.5rem;
-        margin-bottom: 4rem;
-    }*/
 }
 
 /* SCREEN SIZE: 768px - 1024px */
@@ -15,6 +10,15 @@
     main {
         width: 80%;
         margin-inline: auto;
+    }
+
+    .filter-section {
+        grid-template-columns: 1fr 300px;
+    }
+    
+    .menu-group {
+        max-width: 300px;
+        justify-self: end;
     }
 } 
 
@@ -25,5 +29,5 @@
 
 /* SCREEN SIZE: 1250px + */
 @media (width >= 1250px) {
-    
+        
 }
