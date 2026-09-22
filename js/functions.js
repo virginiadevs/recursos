@@ -25,6 +25,9 @@ async function loadData() {
 
 // Mostrar categorías
 function renderCategories(tags) {
+    tags.sort((a, b) =>
+        a.localeCompare(b, "es", { sensitivity: "base" })
+    );
     tags.forEach(tag => {
         const option = document.createElement("option");
         option.setAttribute("value", tag.toLowerCase());
@@ -35,6 +38,9 @@ function renderCategories(tags) {
 
 // Mostrar recursos
 function renderResources(resources) {
+    resources.sort((a, b) =>
+        a.name.localeCompare(b.name, "es", { sensitivity: "base" })
+    );
     resources.forEach(resource => {
         const li = document.createElement("li");
         li.setAttribute("class", "list-item");

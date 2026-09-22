@@ -1,17 +1,7 @@
 {
     "tags": [
-        "accesibilidad",
-        "aprendizaje",
-        "backend",
-        "css",
-        "frontend",
-        "html",
-        "img",
-        "js",
-        "juego",
-        "php",
-        "plantillas",
-        "sql"
+        "HTML","CSS","Javascript","PHP","Backend","Frontend","Imágenes",
+        "Plantillas","Juegos","Aprendizaje","Bases de datos"
     ],    
     "resources": [
         {
@@ -39,22 +29,29 @@
             "id": 4,
             "name": "Pixelbin.io | Erase - Quitar fondo de imágenes",
             "active": true,
-            "tags": ["img"],
+            "tags": ["imágenes"],
             "url": "https://www.erase.bg/es"
         },
         {
             "id": 5,
             "name": "Pixelbin.io | Upscale Media - Mejorar calidad de imagen",
             "active": true,
-            "tags": ["img"],
+            "tags": ["imágenes"],
             "url": "https://www.upscale.media/es"
         },
         {
             "id": 6,
             "name": "Pixelbin.io | Watermark Remover - Eliminador de marcas de agua de imágenes",
             "active": true,
-            "tags": ["img"],
+            "tags": ["imágenes"],
             "url": "https://www.watermarkremover.io/es"
+        },
+        {
+            "id": 7,
+            "name": "Sheldon's Enemy List | Lista de enemigos mortales de Sheldon Cooper (en)",
+            "active": true,
+            "tags": [""],
+            "url": "https://mfan700.neocities.org/"
         }
     ]
 }
