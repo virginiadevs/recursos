@@ -69,14 +69,14 @@ header {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 20px;
+    margin: 10px 0 5px;
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 13px;
     font-weight: 500;
     line-height: 1.4;
-    margin-top: 5px;
     color: var(--grey);
 }
 /* ----------- */
@@ -143,6 +143,8 @@ input, select {
     border: 1px dashed var(--light-grey);
     border-radius: 20px;
     padding: 5px 10px;
+
+    & label { font-size: 13px; }
 
     & #tags-list {
         flex: 1;
@@ -212,5 +214,6 @@ footer {
 
     & p {
         font-size: 12px;
+        color: var(--grey);
     }
 }
