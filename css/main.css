@@ -164,7 +164,7 @@ input, select {
     border-left: var(--grey) 5px dotted;
     box-shadow: 1px 2px 3px var(--light-grey);
 
-    min-height: 600px;
+    height: 650px;
 
     & .resources-list {
         margin-inline: 2rem 1rem;
