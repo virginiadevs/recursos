@@ -88,6 +88,7 @@ main {
     flex-direction: column;
     gap: 2rem;
 }
+/* ----------- */
 
 /* FILTERS */
 .filter-section {
@@ -164,28 +165,55 @@ input, select {
     border-left: var(--grey) 5px dotted;
     box-shadow: 1px 2px 3px var(--light-grey);
 
-    height: 650px;
+    height: 700px;
+    max-height: 700px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+    
+.resources-section .resources-list {
+    margin-inline: 2rem 1rem;
+    line-height: 30px;
 
-    & .resources-list {
-        margin-inline: 2rem 1rem;
-        line-height: 30px;
+    & .list-item {
+        padding-inline-start: 1.5ch;
 
-        & .list-item {
-            padding-inline-start: 1.5ch;
+        &::marker {
+            content: "\f105";
+            font-family: "Font Awesome 7 Free";
+            font-weight: 600;
+            margin-right: 5px;
+        }
 
-            &::marker {
-                content: "\f105";
-                font-family: "Font Awesome 7 Free";
-                font-weight: 600;
-                margin-right: 5px;
+        & a {
+            width: 100%; 
+            display: inline-block;
+
+            &:hover {
+                color: blue;
+                text-decoration: underline;
             }
         }
     }
 }
 
-.resources-list .list-item a:hover, .resources-list .list-item:has(a:hover)::marker {
-    color: blue;
-    text-decoration: underline;
+.resources-section .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem 1rem;
+    margin-top: auto;
+
+    & button, span {
+        font-size: 12px;
+    };
+
+    & button {
+        padding: 3px 7px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
 /* ----------- */
 

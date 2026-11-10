@@ -1,8 +1,10 @@
-let data;
-
 const searchInput = document.querySelector("#search-input");
 const tagsList = document.querySelector(".tags-group");
 const resourcesList = document.querySelector(".resources-list");
+
+let data;
+let currentPage = 1;
+const elementsPerPage = 20;
 
 loadData();
 
@@ -36,7 +38,7 @@ function renderCategories(tags) {
 
         tagBtn.addEventListener("click", () => {
             tagBtn.classList.toggle("active");
-
+            currentPage = 1;
             filterResources();
         });
 
@@ -46,10 +48,18 @@ function renderCategories(tags) {
 
 // Mostrar recursos
 function renderResources(resources) {
+    // Ordenar alafabéticamente
     resources.sort((a, b) =>
         a.name.localeCompare(b.name, "es", { sensitivity: "base" })
     );
-    resources.forEach(resource => {
+
+    // Índices de página
+    const first = (currentPage - 1) * elementsPerPage;
+    const last = first + elementsPerPage;
+    const resourcesPage = resources.slice(first, last);
+
+    // Mostrar
+    resourcesPage.forEach(resource => {
         const li = document.createElement("li");
         li.setAttribute("class", "list-item");
 
@@ -61,10 +71,54 @@ function renderResources(resources) {
         li.appendChild(link);
         resourcesList.appendChild(li);
     });
+
+    updatePagination(resources.length);
+}
+
+// Paginación
+function updatePagination(elements) {
+    const pagesTotal = Math.ceil(elements / elementsPerPage);
+    const pagination = document.querySelector(".pagination");
+    pagination.innerHTML = "";
+
+    // Si solo hay 1 página o ninguna, no se muestran los controles
+    if (pagesTotal <= 1) return;
+
+    // Botón Anterior
+    const btnAnterior = document.createElement("button");
+    btnAnterior.textContent = "Anterior";
+    btnAnterior.disabled = currentPage === 1;
+    btnAnterior.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            filterResources(); // Vuelve a filtrar y renderizar
+        }
+    });
+    pagination.appendChild(btnAnterior);
+
+    // Indicador de página (ej: Página 1 de 3)
+    const spanInfo = document.createElement("span");
+    spanInfo.textContent = `Página ${currentPage} de ${pagesTotal}`;
+    pagination.appendChild(spanInfo);
+
+    // Botón Siguiente
+    const btnSiguiente = document.createElement("button");
+    btnSiguiente.textContent = "Siguiente";
+    btnSiguiente.disabled = currentPage === pagesTotal;
+    btnSiguiente.addEventListener("click", () => {
+        if (currentPage < pagesTotal) {
+            currentPage++;
+            filterResources(); // Vuelve a filtrar y renderizar
+        }
+    });
+    pagination.appendChild(btnSiguiente);
 }
 // ---------------------------------------------------------------------------------------
 
-searchInput.addEventListener("input", filterResources);
+searchInput.addEventListener("input", () => {
+    currentPage = 1;
+    filterResources();
+});
 
 function filterResources() {
     document.querySelector(".resources-list").replaceChildren();
