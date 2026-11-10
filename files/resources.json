@@ -1,57 +1,134 @@
 {
     "tags": [
-        "HTML","CSS","Javascript","PHP","Backend","Frontend","Imágenes",
-        "Plantillas","Juegos","Bases de datos"
+        "Backend","Frontend","Imágenes",
+        "Plantillas","Juegos","Aprendizaje"
     ],    
     "resources": [
         {
             "id": 1,
             "name": "HTMLrev - Plantillas y temas gratuitos de HTML y CSS (en inglés)",
-            "active": true,
-            "tags": ["html", "css", "plantillas", "frontend"],
+            "tags": ["plantillas", "frontend"],
             "url": "https://htmlrev.com/"
         },
         {
             "id": 2,
             "name": "Roadmap - Ideas para proyectos de frontend (en inglés)",
-            "active": true,
-            "tags": ["html", "css", "frontend"],
+            "tags": ["frontend"],
             "url": "https://roadmap.sh/frontend/projects"
         },
         {
             "id": 3,
             "name": "Roadmap - Ideas para proyectos de backend (en inglés)",
-            "active": true,
-            "tags": ["html", "css", "backend"],
+            "tags": ["backend"],
             "url": "https://roadmap.sh/backend/projects"
         },
         {
             "id": 4,
             "name": "Pixelbin.io Erase - Quitar fondo de imágenes",
-            "active": true,
             "tags": ["imágenes"],
             "url": "https://www.erase.bg/es"
         },
         {
             "id": 5,
             "name": "Pixelbin.io Upscale Media - Mejorar calidad de imagen",
-            "active": true,
             "tags": ["imágenes"],
             "url": "https://www.upscale.media/es"
         },
         {
             "id": 6,
             "name": "Pixelbin.io Watermark Remover - Eliminador de marcas de agua de imágenes",
-            "active": true,
             "tags": ["imágenes"],
             "url": "https://www.watermarkremover.io/es"
         },
         {
             "id": 7,
             "name": "Sheldon's Enemy List - Lista de enemigos mortales de Sheldon Cooper (en inglés)",
-            "active": true,
             "tags": [""],
             "url": "https://mfan700.neocities.org/"
+        },
+        {
+            "id": 8,
+            "name": "APIs públicas",
+            "tags": [""],
+            "url": "https://publicapis.dev"
+        },
+        {
+            "id": 9,
+            "name": "Manual de entrevistas",
+            "tags": [""],
+            "url": "https://www.techinterviewhandbook.org"
+        },
+        {
+            "id": 10,
+            "name": "Plantillas oscuras para diseño web (en inglés)",
+            "tags": ["plantillas", "frontend"],
+            "url": "https://www.dark.design"
+        },
+        {
+            "id": 11,
+            "name": "Generador de estructuras web Grid",
+            "tags": ["frontend"],
+            "url": "https://cssgridgenerator.io"
+        },
+        {
+            "id": 12,
+            "name": "Patrones de diseño web (en inglés)",
+            "tags": ["frontend"],
+            "url": "https://www.patterns.dev"
+        },
+        {
+            "id": 13,
+            "name": "Aprende Unity (en inglés)",
+            "tags": [""],
+            "url": "https://learn.unity.com"
+        },
+        {
+            "id": 14,
+            "name": "Aprende a programar con juegos de rol (en inglés)",
+            "tags": ["aprendizaje", "juegos"],
+            "url": "https://www.boot.dev"
+        },
+        {
+            "id": 15,
+            "name": "Aprende mecanografía",
+            "tags": ["aprendizaje"],
+            "url": "https://www.typingclub.com"
+        },
+        {
+            "id": 16,
+            "name": "Leyes UX",
+            "tags": ["aprendizaje"],
+            "url": "https://lawsofux.com/es/"
+        },
+        {
+            "id": 17,
+            "name": "Roadmap - Cómo crear una API paso a paso (en inglés)",
+            "tags": [""],
+            "url": "https://roadmap.sh/api-design"
+        },
+        {
+            "id": 18,
+            "name": "Generador de estructuras web Flex",
+            "tags": ["frontend"],
+            "url": "https://flexboxlabs.netlify.app"
+        },
+        {
+            "id": 19,
+            "name": "Dev Docs",
+            "tags": [""],
+            "url": "https://devdocs.io"
+        },
+        {
+            "id": 20,
+            "name": "CV Checker",
+            "tags": [""],
+            "url": "https://www.resumego.net/resume-checker/"
+        },
+        {
+            "id": 21,
+            "name": "Libros de programación",
+            "tags": [""],
+            "url": "https://flaviocopes.com/books/"
         }
     ]
 }
