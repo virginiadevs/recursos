@@ -1,7 +1,7 @@
 let data;
 
 const searchInput = document.querySelector("#search-input");
-const tagsList = document.querySelector("#tags-list");
+const tagsList = document.querySelector(".tags-group");
 const resourcesList = document.querySelector(".resources-list");
 
 loadData();
@@ -29,10 +29,18 @@ function renderCategories(tags) {
         a.localeCompare(b, "es", { sensitivity: "base" })
     );
     tags.forEach(tag => {
-        const option = document.createElement("option");
-        option.setAttribute("value", tag.toLowerCase());
-        option.textContent = tag;
-        tagsList.appendChild(option);
+        const tagBtn = document.createElement("button");
+        tagBtn.type = "button";
+        tagBtn.setAttribute("value", tag.toLowerCase());
+        tagBtn.textContent = tag;
+
+        tagBtn.addEventListener("click", () => {
+            tagBtn.classList.toggle("active");
+
+            filterResources();
+        });
+
+        tagsList.appendChild(tagBtn);
     });
 }
 
@@ -57,16 +65,17 @@ function renderResources(resources) {
 // ---------------------------------------------------------------------------------------
 
 searchInput.addEventListener("input", filterResources);
-tagsList.addEventListener("change", filterResources);
 
 function filterResources() {
     document.querySelector(".resources-list").replaceChildren();
-
-    const category = tagsList.value;
+    activeButtons = document.querySelectorAll(".tags-group button.active");
+    const selectedCategories = Array.from(activeButtons).map(btn => btn.value);
+    
     const search = searchInput.value.trim().toLowerCase();
 
     const filteredResources = data.resources.filter(resource => {
-        const matchesCategory = !category || resource.tags.includes(category);
+        const matchesCategory = selectedCategories.length === 0 || 
+        selectedCategories.some(cat => resource.tags.includes(cat));
 
         const matchesSearch = !search || resource.name.toLowerCase().includes(search);
 
