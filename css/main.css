@@ -136,7 +136,7 @@ input, select {
 .tags-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: .75rem;
 
     & button {
         background: none;
@@ -144,11 +144,11 @@ input, select {
         border-radius: 5px;
         padding: 5px 7px;
         cursor: pointer;
+
+        & i { margin-right: 5px; }
     }
 
-    & .active {
-        border-color: blue;
-    }
+    & .active { border-color: var(--category-color); }
 }
 /* ----------- */
 
