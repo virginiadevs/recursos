@@ -2,7 +2,8 @@ const searchInput = document.querySelector("#search-input");
 const tagsList = document.querySelector(".tags-group");
 const resourcesList = document.querySelector(".resources-list");
 
-let data;
+let resourcesData;
+let categoriesData;
 let currentPage = 1;
 const elementsPerPage = 20;
 
@@ -10,31 +11,40 @@ loadData();
 
 async function loadData() {
     try {
-        const response = await fetch("files/resources.json");
-        data = await response.json();
+        const [resourcesResponse, categoriesResponse] = await Promise.all([
+            fetch("files/resources.json"),
+            fetch("files/categories.json")
+        ]);
 
-        if (!response.ok) {
-            throw new Error("No se pudo cargar el JSON");
+        if (!resourcesResponse.ok || !categoriesResponse.ok) {
+            throw new Error("No se pudieron cargar los archivos JSON");
         }
 
-        renderResources(data.resources);
-        renderCategories(data.tags);
+        resourcesData = await resourcesResponse.json();
+        categoriesData = await categoriesResponse.json();
+
+        renderResources(resourcesData.resources);
+        renderCategories(categoriesData.categories);
     }
-    catch(err) {
+    catch (err) {
         console.error("Error: ", err);
     }
 }
 
 // Mostrar categorías
-function renderCategories(tags) {
-    tags.sort((a, b) =>
-        a.localeCompare(b, "es", { sensitivity: "base" })
+function renderCategories(categories) {
+    categories.sort((a, b) =>
+        a.name.localeCompare(b.name, "es", { sensitivity: "base" })
     );
-    tags.forEach(tag => {
+    categories.forEach(category => {
         const tagBtn = document.createElement("button");
         tagBtn.type = "button";
-        tagBtn.setAttribute("value", tag.toLowerCase());
-        tagBtn.textContent = tag;
+        tagBtn.setAttribute("value", category.tag);
+        tagBtn.style.setProperty("--category-color", category.color);
+        tagBtn.textContent = category.name;
+
+        const tagIcon = document.createElement("i");
+        tagIcon.className = category.icon;
 
         tagBtn.addEventListener("click", () => {
             tagBtn.classList.toggle("active");
@@ -42,6 +52,7 @@ function renderCategories(tags) {
             filterResources();
         });
 
+        tagBtn.prepend(tagIcon);
         tagsList.appendChild(tagBtn);
     });
 }
@@ -127,9 +138,13 @@ function filterResources() {
     
     const search = searchInput.value.trim().toLowerCase();
 
-    const filteredResources = data.resources.filter(resource => {
+    const filteredResources = resourcesData.resources.filter(resource => {
         const matchesCategory = selectedCategories.length === 0 || 
-        selectedCategories.some(cat => resource.tags.includes(cat));
+        selectedCategories.some(cat => 
+            categoriesData.categories.some(category =>
+                category.tag === cat && resource.tags.includes(category.tag)
+            )
+        );
 
         const matchesSearch = !search || resource.name.toLowerCase().includes(search);
 

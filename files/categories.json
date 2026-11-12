@@ -1,0 +1,40 @@
+{
+    "categories": [
+        {
+            "name": "Aprendizaje",
+            "tag": "aprendizaje",
+            "icon": "fas fa-graduation-cap",
+            "color": "#3E7DD7"
+        },
+        {
+            "name": "Desarrollo web",
+            "tag": "desarrollo",
+            "icon": "fas fa-code",
+            "color": "#2A985E"
+        },
+        {
+            "name": "Diseño y recursos gráficos",
+            "tag": "diseno",
+            "icon": "fas fa-palette",
+            "color": "#9855C9"
+        },
+        {
+            "name": "Gamificación",
+            "tag": "gamificacion",
+            "icon": "fas fa-gamepad",
+            "color": "#E58A35"
+        },
+        {
+            "name": "Plantillas",
+            "tag": "plantillas",
+            "icon": "fas fa-layer-group",
+            "color": "#C39422"
+        },
+        {
+            "name": "Herramientas",
+            "tag": "herramientas",
+            "icon": "fas fa-wrench",
+            "color": "#369194"
+        }
+    ]
+}
