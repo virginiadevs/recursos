@@ -1,3 +1,12 @@
+// Light/Dark Mode
+const theme = localStorage.getItem("theme") ??
+    (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light");
+
+document.documentElement.classList.toggle("dark", theme === "dark");
+/* ----------- */
+
 const searchInput = document.querySelector("#search-input");
 const tagsList = document.querySelector(".tags-group");
 const resourcesList = document.querySelector(".resources-list");

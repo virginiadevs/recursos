@@ -18,10 +18,8 @@
 
 html { scroll-behavior: smooth; }
 
-.dark { color-scheme: dark; }
-
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 14px;
     color: var(--text-color);
     background: var(--background-color);
@@ -33,27 +31,12 @@ a {
 }
 
 p, span { font-size: 14px; }
-figure img { width: 100%; }
-
-
 .hidden { display: none; }
-/* ----------- */
-
-/* LIGHT/DARK MODE TOGGLE */
-#headerThemeToggle, #mobileThemeToggle {
-    border: 0;
-    background: none;
-    cursor: pointer;
-    transition: transform .5s ease;
-
-    & .sun { fill: light-dark(#000, transparent); }
-    & .moon { fill: light-dark(transparent, #fff); }
-}
 /* ----------- */
 
 /* HEADER */
 header {
-    background-color: aliceblue;
+    background-color: light-dark(aliceblue, #303B49);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,6 +49,8 @@ header {
     width: var(--size);
     height: var(--size);
     margin: auto;
+
+    & img { width: 100%; }
 }
 
 h1 {
@@ -154,15 +139,12 @@ input, select {
 
 /* RESOURCES */
 .resources-section {
-    background-image: 
-        linear-gradient(to bottom, var(--light-grey) 1px, transparent 1px);
     background-size: 30px 30px;
     overflow-y: auto;
-    background-color: #FFFFE0;
+    background-color: light-dark(#FFFFE0, #000);
     background-position: 0 24px;
 
     border: 1px solid var(--light-grey);
-    border-left: var(--grey) 5px dotted;
     box-shadow: 1px 2px 3px var(--light-grey);
 
     height: 700px;
@@ -171,13 +153,21 @@ input, select {
     display: flex;
     flex-direction: column;
 }
+
+html:not(.dark) .resources-section {
+    background-image: 
+        linear-gradient(to bottom, var(--light-grey) 1px, transparent 1px);
     
+    border-left: var(--grey) 5px dotted;
+}
+
 .resources-section .resources-list {
     margin-inline: 2rem 1rem;
     line-height: 30px;
 
     & .list-item {
         padding-inline-start: 1.5ch;
+        font-weight: 500;
 
         &::marker {
             content: "\f105";
@@ -189,12 +179,9 @@ input, select {
         & a {
             width: 100%; 
             display: inline-block;
-
-            &:hover {
-                color: blue;
-                text-decoration: underline;
-            }
         }
+
+        &:hover, &:hover a { color: light-dark(blue, #00FF41); }
     }
 }
 
