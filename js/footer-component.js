@@ -10,6 +10,9 @@ class myFooter extends HTMLElement {
             footer .my-logo {
                 --size: 40px; width: var(--size); height: var(--size);
             }
+            footer .my-logo img { 
+                width: 100%; 
+            }
             footer p {
                 font-size: 12px; color: var(--grey); margin-top: 9px;
             }
