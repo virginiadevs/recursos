@@ -25,12 +25,6 @@
             "color": "#E58A35"
         },
         {
-            "name": "Plantillas",
-            "tag": "plantillas",
-            "icon": "fas fa-layer-group",
-            "color": "#C39422"
-        },
-        {
             "name": "Herramientas",
             "tag": "herramientas",
             "icon": "fas fa-wrench",
