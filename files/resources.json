@@ -1,130 +1,77 @@
 {   
     "resources": [
-        {
-            "id": 1,
-            "name": "HTMLrev - Plantillas y temas gratuitos de HTML y CSS (en inglés)",
-            "tags": ["desarrollo", "plantillas"],
-            "url": "https://htmlrev.com/"
-        },
-        {
-            "id": 2,
-            "name": "Roadmap - Ideas para proyectos de frontend (en inglés)",
-            "tags": ["desarrollo"],
-            "url": "https://roadmap.sh/frontend/projects"
-        },
-        {
-            "id": 3,
-            "name": "Roadmap - Ideas para proyectos de backend (en inglés)",
-            "tags": ["desarrollo"],
-            "url": "https://roadmap.sh/backend/projects"
-        },
-        {
-            "id": 4,
-            "name": "Pixelbin.io Erase - Quitar fondo de imágenes",
-            "tags": ["diseno"],
-            "url": "https://www.erase.bg/es"
-        },
-        {
-            "id": 5,
-            "name": "Pixelbin.io Upscale Media - Mejorar calidad de imagen",
-            "tags": ["diseno"],
-            "url": "https://www.upscale.media/es"
-        },
-        {
-            "id": 6,
-            "name": "Pixelbin.io Watermark Remover - Eliminador de marcas de agua de imágenes",
-            "tags": ["diseno"],
-            "url": "https://www.watermarkremover.io/es"
-        },
-        {
-            "id": 7,
-            "name": "Sheldon's Enemy List - Lista de enemigos mortales de Sheldon Cooper (en inglés)",
-            "tags": [""],
-            "url": "https://mfan700.neocities.org/"
-        },
-        {
-            "id": 8,
-            "name": "APIs públicas",
-            "tags": [""],
-            "url": "https://publicapis.dev"
-        },
-        {
-            "id": 9,
-            "name": "Manual de entrevistas",
-            "tags": [""],
-            "url": "https://www.techinterviewhandbook.org"
-        },
-        {
-            "id": 10,
-            "name": "Plantillas oscuras para diseño web (en inglés)",
-            "tags": ["desarrollo", "plantillas"],
-            "url": "https://www.dark.design"
-        },
-        {
-            "id": 11,
-            "name": "Generador de estructuras web Grid",
-            "tags": ["desarrollo"],
-            "url": "https://cssgridgenerator.io"
-        },
-        {
-            "id": 12,
-            "name": "Patrones de diseño web (en inglés)",
-            "tags": ["desarrollo"],
-            "url": "https://www.patterns.dev"
-        },
-        {
-            "id": 13,
-            "name": "Aprende Unity (en inglés)",
-            "tags": [""],
-            "url": "https://learn.unity.com"
-        },
-        {
-            "id": 14,
-            "name": "Aprende a programar con juegos de rol (en inglés)",
-            "tags": ["aprendizaje", "gamificacion"],
-            "url": "https://www.boot.dev"
-        },
-        {
-            "id": 15,
-            "name": "Aprende mecanografía",
-            "tags": ["aprendizaje"],
-            "url": "https://www.typingclub.com"
-        },
-        {
-            "id": 16,
-            "name": "Leyes UX",
-            "tags": ["aprendizaje"],
-            "url": "https://lawsofux.com/es/"
-        },
-        {
-            "id": 17,
-            "name": "Roadmap - Cómo crear una API paso a paso (en inglés)",
-            "tags": [""],
-            "url": "https://roadmap.sh/api-design"
-        },
-        {
-            "id": 18,
-            "name": "Generador de estructuras web Flex",
-            "tags": ["desarrollo"],
-            "url": "https://flexboxlabs.netlify.app"
-        },
-        {
-            "id": 19,
-            "name": "Dev Docs",
-            "tags": [""],
-            "url": "https://devdocs.io"
-        },
-        {
-            "id": 20,
-            "name": "CV Checker",
-            "tags": [""],
-            "url": "https://www.resumego.net/resume-checker/"
-        },
-        {
-            "id": 21,
-            "name": "Libros de programación",
-            "tags": [""],
-            "url": "https://flaviocopes.com/books/"
-        }
+        { "id": 1, "name": "100 proyectos para aprender Javascript | Midudev", "tags": ["desarrollo","aprendizaje"], "url": "https://www.javascript100.dev/" },
+        { "id": 2, "name": "Aprende HTML, desde los fundamentos hasta conceptos avanzados | ManzDev", "tags": ["desarrollo","aprendizaje"], "url": "https://lenguajehtml.com/html/" },
+        { "id": 3, "name": "Aprende CSS, desde los fundamentos hasta conceptos avanzados | ManzDev", "tags": ["desarrollo","aprendizaje"], "url": "https://lenguajecss.com/css/" },
+        { "id": 4, "name": "Aprende Javascript, desde los fundamentos hasta conceptos avanzados | ManzDev", "tags": ["desarrollo","aprendizaje"], "url": "https://lenguajejs.com/javascript/" },
+        { "id": 5, "name": "Conversor de código Tailwind a CSS", "tags": ["desarrollo"], "url": "https://tailwind-to-css.vercel.app/" },
+        { "id": 6, "name": "7 trucos de diseño (en inglés)", "tags": ["diseno","desarrollo"], "url": "https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886" },
+        { "id": 7, "name": "Paletas de colores corporativas de marcas (en inglés)", "tags": ["diseno","desarrollo"], "url": "https://brandcolors.net/" },
+        { "id": 8, "name": "Paletas de colores de los Pokemon (en inglés)", "tags": ["diseno","desarrollo"], "url": "https://www.pokemonpalette.com/explore" },
+        { "id": 9, "name": "Generador visual de formas mediante la propiedad CSS border-radius (en inglés)", "tags": ["desarrollo"], "url": "https://9elements.github.io/fancy-border-radius/" },
+        { "id": 10, "name": "Directorio de API públicas para integrar en proyectos de desarrollo web", "tags": ["desarrollo"], "url": "https://publicapis.dev/" },
+        { "id": 11, "name": "Colección de tipografías (en inglés) | Google fonts", "tags": ["desarrollo"], "url": "https://fonts.google.com/" },
+        { "id": 12, "name": "Tutorial para crear texto estilo WordArt en una web", "tags": ["desarrollo","aprendizaje"], "url": "https://lenguajecss.com/css/fuentes-y-tipografias/contorno-en-tipografias/" },
+        { "id": 13, "name": "Tutorial para publicar una web hecha con Astro en Github Pages", "tags": ["desarrollo","aprendizaje"], "url": "https://docs.astro.build/es/guides/deploy/github/" },
+        { "id": 14, "name": "Tutorial para publicar un proyecto de Github en Github Pages", "tags": ["desarrollo","aprendizaje"], "url": "https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site" },
+        { "id": 15, "name": "Tutorial para crear una página 404 personalizada en Github Pages", "tags": ["desarrollo","aprendizaje"], "url": "https://docs.github.com/es/enterprise-cloud@latest/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site" },
+        { "id": 16, "name": "Generador de diseños CSS Grid y generar su código automáticamente", "tags": ["desarrollo"], "url": "https://cssgridgenerator.io/" },
+        { "id": 17, "name": "Analizador de rendimiento, velocidad de carga y optimización de páginas web | GTmetrix", "tags": ["herramientas","desarrollo"], "url": "https://gtmetrix.com/" },
+        { "id": 18, "name": "Identificador de tecnologías utilizadas en cualquier página web | Builtwith", "tags": ["herramientas","desarrollo"], "url": "https://builtwith.com/es/" },
+        { "id": 19, "name": "Archivo histórico de páginas web (en inglés) | Archive.org", "tags": ["herramientas"], "url": "https://web.archive.org/" },
+        { "id": 20, "name": "Logotipos descargables de marcas (en inglés)", "tags": ["diseno"], "url": "https://brandlogos.net/" },
+        { "id": 21, "name": "Logotipos de marcas, descargables en SVG", "tags": ["diseno"], "url": "https://worldvectorlogo.com/es" },
+        { "id": 22, "name": "Aprende mecanografía", "tags": ["aprendizaje"], "url": "https://www.edclub.com/es/library/el-mundo-de-la-mecanograf%C3%ADa" },
+        { "id": 23, "name": "Iconos vectoriales para proyectos digitales (en inglés) | Fontawesome", "tags": ["desarrollo","diseno"], "url": "https://fontawesome.com/search?ic=free-collection" },
+        { "id": 24, "name": "Recursos visuales: buscar, crear y editar imágenes y vídeos | Magnific (antes Freepik)", "tags": ["diseno"], "url": "https://www.magnific.com/es" },
+        { "id": 25, "name": "Diseñador de mockups de dispositivos, presentar diseños y capturas de pantalla (en inglés)", "tags": ["diseno"], "url": "https://shots.so/" },
+        { "id": 26, "name": "Ampliar y mejorar la calidad de imágenes | Pixelbin", "tags": ["herramientas","diseno"], "url": "https://www.upscale.media/es" },
+        { "id": 27, "name": "Eliminar marcas de agua de imágenes | Pixelbin", "tags": ["herramientas","diseno"], "url": "https://www.watermarkremover.io/es" },
+        { "id": 28, "name": "Eliminar el fondo de las imágenes | Pixelbin", "tags": ["herramientas","diseno"], "url": "https://www.erase.bg/es" },
+        { "id": 29, "name": "Ampliar imágenes", "tags": ["herramientas","diseno"], "url": "https://bigjpg.com/es" },
+        { "id": 30, "name": "Ampliar y mejorar la calidad de imágenes | Remaker", "tags": ["herramientas","diseno"], "url": "https://remaker.ai/es/features/ai-image-upscaler/" },
+        { "id": 31, "name": "Eliminar y customizar fondos de fotos de perfil", "tags": ["herramientas","diseno"], "url": "https://pfpmaker.com/" },
+        { "id": 32, "name": "Eliminar el fondo de las imágenes | Photoroom", "tags": ["herramientas","diseno"], "url": "https://www.photoroom.com/es/tools/background-remover" },
+        { "id": 33, "name": "Analizador de fotos de perfil de LinkedIn", "tags": ["herramientas"], "url": "https://www.snappr.com/photo-analyzer/" },
+        { "id": 34, "name": "Evaluar la calidad estética de fotos", "tags": ["herramientas"], "url": "https://rate-my-photo.com/" },
+        { "id": 35, "name": "Ilustraciones vectoriales descargables y personalizables | Undraw", "tags": ["diseno"], "url": "https://undraw.co/illustrations" },
+        { "id": 36, "name": "Eliminar marcas de agua de archivos GIF", "tags": ["herramientas","diseno"], "url": "https://arting.ai/es/gif-watermark-remover" },
+        { "id": 37, "name": "Tutorial sobre expresiones regulares en Javascript (en inglés)", "tags": ["desarrollo","aprendizaje"], "url": "https://javascript.info/regexp-introduction" },
+        { "id": 38, "name": "Tutorial de expresiones regulares en Javascript", "tags": ["desarrollo","aprendizaje"], "url": "https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp" },
+        { "id": 39, "name": "Analizador de la calidad del código CSS", "tags": ["desarrollo"], "url": "https://www.projectwallace.com/css-code-quality" },
+        { "id": 40, "name": "Generador de fondos y degradados CSS personalizables", "tags": ["desarrollo"], "url": "https://bg.ibelick.com/" },
+        { "id": 41, "name": "Generador de estructuras de diseño web con CSS Grid y Flexbox", "tags": ["desarrollo"], "url": "https://layout.bradwoods.io/" },
+        { "id": 42, "name": "Plataforma de retos y ejercicios de programación para practicar y mejorar la lógica de código | MoureDev", "tags": ["desarrollo","aprendizaje"], "url": "https://retosdeprogramacion.com/" },
+        { "id": 43, "name": "Libro online gratuito para aprender Javascript desde cero", "tags": ["desarrollo","aprendizaje"], "url": "https://www.eloquentjavascript.es/" },
+        { "id": 44, "name": "Libro online con tutoriales, ejemplos y ejercicios prácticos para aprender Python", "tags": ["desarrollo","aprendizaje"], "url": "https://ellibrodepython.com/" },
+        { "id": 45, "name": "Implementar sistemas de autenticación en aplicaciones web con Javascript", "tags": ["desarrollo","aprendizaje"], "url": "https://authjs.dev/" },
+        { "id": 46, "name": "Generador de estructuras Flexbox y Grid con código CSS", "tags": ["desarrollo"], "url": "https://flexboxlabs.netlify.app/" },
+        { "id": 47, "name": "Proyectos prácticos para aprender y mejorar habilidades de desarrollo frontend (en inglés) | Roadmap", "tags": ["desarrollo","aprendizaje"], "url": "https://roadmap.sh/frontend/projects" },
+        { "id": 48, "name": "Proyectos prácticos para aprender y mejorar habilidades de desarrollo backend (en inglés) | Roadmap", "tags": ["desarrollo","aprendizaje"], "url": "https://roadmap.sh/backend/projects" },
+        { "id": 49, "name": "Diseñador de barras de desplazamiento con CSS", "tags": ["desarrollo"], "url": "https://scrollbar.app/" },
+        { "id": 50, "name": "Guía de principios y leyes psicológicas aplicadas al diseño de experiencias de usuario (UX)", "tags": ["desarrollo","diseno","aprendizaje"], "url": "https://lawsofux.com/es/" },
+        { "id": 51, "name": "Comparador de velocidad y rendimiento de fragmentos de código Javascript", "tags": ["desarrollo"], "url": "https://perf.link/" },
+        { "id": 52, "name": "Recortador de fragmentos de vídeos de YouTube", "tags": ["herramientas"], "url": "https://appsgolem.com/en/cut-youtube-video/" },
+        { "id": 53, "name": "Conversor de archivos entre diferentes formatos", "tags": ["herramientas"], "url": "https://convertio.co/es/" },
+        { "id": 54, "name": "Conversor de archivos PDF a diferentes formatos (Word, Excel, etc) | iLovePDF", "tags": ["herramientas"], "url": "https://www.ilovepdf.com/es" },
+        { "id": 55, "name": "Plataforma con tutoriales y ejemplos prácticos de programación y desarrollo web | W3Schools", "tags": ["desarrollo","aprendizaje"], "url": "https://www.w3schools.com/" },
+        { "id": 56, "name": "Analizador de estadísticas y métricas de redes sociales y creadores de contenido", "tags": ["herramientas"], "url": "https://socialblade.com/" },
+        { "id": 57, "name": "Fuente de imágenes y fotografías de alta calidad | Unsplash", "tags": ["diseno"], "url": "https://unsplash.com/es" },
+        { "id": 58, "name": "Galería de imágenes y otros recursos gráficos descargables | Pixabay", "tags": ["diseno"], "url": "https://pixabay.com/es/" },
+        { "id": 59, "name": "Fotos de stock, imágenes y vídeos | Pexels ", "tags": ["diseno"], "url": "https://www.pexels.com/es-es/" },
+        { "id": 60, "name": "Plataforma para buscar y compartir GIFs animados y stickers", "tags": ["diseno"], "url": "https://giphy.com/" },
+        { "id": 61, "name": "Plataforma de vídeos, animaciones y efectos de sonido gratuitos | Videvo", "tags": ["diseno"], "url": "https://filedownloadz.my/videvo/" },
+        { "id": 62, "name": "Juego para aprender CSS Flexbox mediante retos con ranas", "tags": ["gamificacion"], "url": "https://flexboxfroggy.com/#es" },
+        { "id": 63, "name": "Juego para aprender CSS Flexbox mediante desafíos de estrategia (en inglés)", "tags": ["gamificacion"], "url": "http://www.flexboxdefense.com/" },
+        { "id": 64, "name": "Aventura interactiva para aprender CSS Flexbox (en inglés)", "tags": ["gamificacion"], "url": "https://codingfantasy.com/games/flexboxadventure" },
+        { "id": 65, "name": "Juego para aprender CSS Grid mediante un jardín de zanahorias", "tags": ["gamificacion"], "url": "https://cssgridgarden.com/#es" },
+        { "id": 66, "name": "Aventura interactiva para aprender CSS Grid (en inglés)", "tags": ["gamificacion"], "url": "https://codingfantasy.com/games/css-grid-attack" },
+        { "id": 67, "name": "Juegos para niños de introducción a código", "tags": ["gamificacion"], "url": "https://www.codemonkey.com/es/hour-of-code/" },
+        { "id": 68, "name": "Aprende a programar mediante juegos de aventuras y desafíos", "tags": ["gamificacion"], "url": "https://codecombat.com/" },
+        { "id": 69, "name": "Bootcamp gratuito de programación (lista de reproducción de youtube) | ManzDev", "tags": ["aprendizaje"], "url": "https://www.youtube.com/playlist?list=PLx5xbrpW6nXgISwDvrMeKuryN9U1Giqzj" },
+        { "id": 70, "name": "5 juegos para aprender SQL (en inglés)", "tags": ["gamificacion"], "url": "https://www.sqlnoir.com/blog/games-to-learn-sql" },
+        { "id": 71, "name": "Entrenamiento técnico en datos mediante simulación interactiva", "tags": ["gamificacion"], "url": "https://particulardeexcel.com/juego" },
+        { "id": 72, "name": "Selector de licencias Creative Commons y los permisos de uso de una obra", "tags": ["herramientas"], "url": "https://creativecommons.org/chooser/" },
+        { "id": 73, "name": "Sheldon's Enemy List - Lista de enemigos mortales de Sheldon Cooper (en inglés)", "tags": [""], "url": "https://mfan700.neocities.org/" }
     ]
 }
